@@ -21,9 +21,9 @@ public class Ex {
 		aluno2.setMae("Cristiana");
 		aluno2.setPai("Marcos");
 		aluno2.setNota1(Double.valueOf(90.0));
-		aluno2.setNota2(Double.valueOf(80.0));
-		aluno2.setNota3(Double.valueOf(70.0));
-		aluno2.setNota4(Double.valueOf(60.0));
+		aluno2.setNota2(Double.valueOf(90.0));
+		aluno2.setNota3(Double.valueOf(80.0));
+		aluno2.setNota4(Double.valueOf(70.0));
 		
 		
 		/*System.out.println("Nome do aluno1 é: " + aluno1.getNome());
