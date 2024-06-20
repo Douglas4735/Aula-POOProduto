@@ -16,7 +16,7 @@ public class Ex {
 		
 		
 		Aluno aluno2 = new Aluno();
-		aluno2.setNome("Fernanda");
+		aluno2.setNome("Fernanda adriele fernandes de souza soares");
 		aluno2.setIdade(Integer.valueOf(25));
 		aluno2.setMae("Cristiana");
 		aluno2.setPai("Marcos");
