@@ -6,11 +6,12 @@ public class Aluno {
 	private int idade;
 	private String mae;
 	private String pai;
+	
 	private double nota1;
 	private double nota2;
 	private double nota3;
 	private double nota4;
-	private double mediaNota;
+	
 	
 	public String getNome() {
 		return nome;
@@ -62,7 +63,7 @@ public class Aluno {
 		this.nota4 = nota4;
 	}
 	public double getmediaNota() {
-		return mediaNota;
+		return (nota1 + nota2 + nota3 + nota4) / 4;
 	}
 	@Override
 	public String toString() {
