@@ -8,6 +8,7 @@ public class Aluno {
 	private int idade;
 	private String mae;
 	private String pai;
+	private String comjuge;
 	
 	private double nota1;
 	private double nota2;
@@ -38,6 +39,12 @@ public class Aluno {
 	}
 	public String getPai() {
 		return pai;
+	}
+	public void setComjuge(String comjuge) {
+		this.comjuge = comjuge;
+	}
+	public String getComjuge() {
+		return comjuge;
 	}
 	
 	public double getNota1() {
@@ -87,11 +94,11 @@ public class Aluno {
 	}
 	@Override
 	public String toString() {
-		return "Aluno [nome=" + nome + ", idade=" + idade + ", mae=" + mae + ", pai=" + pai + "]";
+		return "Aluno [nome=" + nome + ", idade=" + idade + ", mae=" + mae + ", pai=" + pai + ", comjuge=" + comjuge +"]";
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(idade, mae, nome, nota1, nota2, nota3, nota4, pai);
+		return Objects.hash(comjuge, idade, mae, nome, nota1, nota2, nota3, nota4, pai);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -102,13 +109,16 @@ public class Aluno {
 		if (getClass() != obj.getClass())
 			return false;
 		Aluno other = (Aluno) obj;
-		return idade == other.idade && Objects.equals(mae, other.mae) && Objects.equals(nome, other.nome)
+		return Objects.equals(comjuge, other.comjuge) && idade == other.idade && Objects.equals(mae, other.mae)
+				&& Objects.equals(nome, other.nome)
 				&& Double.doubleToLongBits(nota1) == Double.doubleToLongBits(other.nota1)
 				&& Double.doubleToLongBits(nota2) == Double.doubleToLongBits(other.nota2)
 				&& Double.doubleToLongBits(nota3) == Double.doubleToLongBits(other.nota3)
 				&& Double.doubleToLongBits(nota4) == Double.doubleToLongBits(other.nota4)
 				&& Objects.equals(pai, other.pai);
 	}
+	
+	
 	
 	
 	

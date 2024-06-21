@@ -8,6 +8,7 @@ public class Ex {
 		aluno1.setIdade(Integer.valueOf(33));
 		aluno1.setMae("Edina");
 		aluno1.setPai("Davi");
+		aluno1.setComjuge("Fernanda adriele fernandes de souza soares");
 		aluno1.setNota1(Double.valueOf(90.0));
 		aluno1.setNota2(Double.valueOf(80.0));
 		aluno1.setNota3(Double.valueOf(70.0));
@@ -20,6 +21,7 @@ public class Ex {
 		aluno2.setIdade(Integer.valueOf(25));
 		aluno2.setMae("Cristiana");
 		aluno2.setPai("Marcos");
+		aluno2.setComjuge("Douglas da silva soares");
 		aluno2.setNota1(Double.valueOf(90.0));
 		aluno2.setNota2(Double.valueOf(90.0));
 		aluno2.setNota3(Double.valueOf(80.0));
