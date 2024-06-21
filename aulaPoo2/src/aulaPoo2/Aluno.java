@@ -1,5 +1,7 @@
 package aulaPoo2;
 
+import java.util.Objects;
+
 public class Aluno {
 
 	private String nome;
@@ -65,10 +67,49 @@ public class Aluno {
 	public double getmediaNota() {
 		return (nota1 + nota2 + nota3 + nota4) / 4;
 	}
+	public boolean getAlunoAprovado() {
+		double media = this.getmediaNota();
+		if(media >= 70) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
+	public String getAlunoAprovado2() {
+		double media = this.getmediaNota();
+		
+		if(media >= 70) {
+			return "Aprovado";
+		}else {
+			return "Reprovado";
+		}
+	}
 	@Override
 	public String toString() {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", mae=" + mae + ", pai=" + pai + "]";
 	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(idade, mae, nome, nota1, nota2, nota3, nota4, pai);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		return idade == other.idade && Objects.equals(mae, other.mae) && Objects.equals(nome, other.nome)
+				&& Double.doubleToLongBits(nota1) == Double.doubleToLongBits(other.nota1)
+				&& Double.doubleToLongBits(nota2) == Double.doubleToLongBits(other.nota2)
+				&& Double.doubleToLongBits(nota3) == Double.doubleToLongBits(other.nota3)
+				&& Double.doubleToLongBits(nota4) == Double.doubleToLongBits(other.nota4)
+				&& Objects.equals(pai, other.pai);
+	}
+	
 	
 	
 	

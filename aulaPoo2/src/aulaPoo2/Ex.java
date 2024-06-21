@@ -32,6 +32,7 @@ public class Ex {
 		System.out.println("Nome Pai: " +aluno1.getPai());*/
 		System.out.println(aluno1);
 		System.out.println("Media do aluno1 é: "+aluno1.getmediaNota());
+		System.out.println("O aluno1 está : " +(aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
 		System.out.println("---------------------------------------");
 		
 		/*System.out.println("Nome do aluno2 é: " + aluno2.getNome());
@@ -40,6 +41,7 @@ public class Ex {
 		System.out.println("Nome Pai: " +aluno2.getPai());*/
 		System.out.println(aluno2);
 		System.out.println("Media do aluno2 é: "+aluno2.getmediaNota());
+		System.out.println("O aluno2 está : "+aluno2.getAlunoAprovado2());
 
 	}
 	
