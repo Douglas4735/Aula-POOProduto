@@ -17,11 +17,11 @@ public class Ex {
 		
 		
 		Aluno aluno2 = new Aluno();
-		aluno2.setNome("Fernanda adriele fernandes de souza soares");
+		aluno2.setNome("Fernanda");
 		aluno2.setIdade(Integer.valueOf(25));
 		aluno2.setMae("Cristiana");
 		aluno2.setPai("Marcos");
-		aluno2.setComjuge("Douglas da silva soares");
+		aluno2.setComjuge("Douglas");
 		aluno2.setNota1(Double.valueOf(90.0));
 		aluno2.setNota2(Double.valueOf(90.0));
 		aluno2.setNota3(Double.valueOf(80.0));
