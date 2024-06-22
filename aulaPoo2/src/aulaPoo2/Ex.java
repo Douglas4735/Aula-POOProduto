@@ -4,7 +4,7 @@ public class Ex {
 	public static void main(String[] args) {
 		
 		Aluno aluno1 = new Aluno();
-		aluno1.setNome("douglas da silva soares");
+		aluno1.setNome("douglas");
 		aluno1.setIdade(Integer.valueOf(33));
 		aluno1.setMae("Edina");
 		aluno1.setPai("Davi");
