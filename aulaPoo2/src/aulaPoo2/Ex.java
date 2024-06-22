@@ -10,9 +10,17 @@ public class Ex {
 		String mae = JOptionPane.showInputDialog("Nome da mãe");
 		String pai = JOptionPane.showInputDialog("Nome do paí");
 		String comjuge = JOptionPane.showInputDialog("Nome do comjuge");
+		
+		String disciplina1 = JOptionPane.showInputDialog("Disciplina1");
 		String nota1 = JOptionPane.showInputDialog("nota1");
+		
+		String disciplina2 = JOptionPane.showInputDialog("Disciplina2");
 		String nota2 = JOptionPane.showInputDialog("nota2");
+		
+		String disciplina3 = JOptionPane.showInputDialog("Disciplina3");
 		String nota3 = JOptionPane.showInputDialog("nota3");
+		
+		String disciplina4 = JOptionPane.showInputDialog("Disciplina4");
 		String nota4 = JOptionPane.showInputDialog("nota4");
 		
 		Aluno aluno1 = new Aluno();
@@ -21,10 +29,16 @@ public class Ex {
 		aluno1.setMae(mae);
 		aluno1.setPai(pai);
 		aluno1.setComjuge(comjuge);
+		
 		aluno1.setNota1(Double.parseDouble(nota1));
 		aluno1.setNota2(Double.parseDouble(nota2));
 		aluno1.setNota3(Double.parseDouble(nota3));
 		aluno1.setNota4(Double.parseDouble(nota4));
+		
+		aluno1.setDisciplina1(disciplina1);
+		aluno1.setDisciplina2(disciplina2);
+		aluno1.setDisciplina3(disciplina3);
+		aluno1.setDisciplina4(disciplina4);
 		
 		
 		/*
@@ -39,13 +53,13 @@ public class Ex {
 		aluno2.setNota3(Double.valueOf(80.0));
 		aluno2.setNota4(Double.valueOf(70.0));
 		*/
-		
+		/*
 		System.out.println("Nome do aluno1 é: " + aluno1.getNome());
 		System.out.println("Idade do aluno1 é: " + aluno1.getIdade()+" anos.");
 		System.out.println("Nome Mãe: " +aluno1.getMae());
 		System.out.println("Nome Pai: " +aluno1.getPai());
-		System.out.println("Nome do Conjuge: " +aluno1.getComjuge());
-		//System.out.println(aluno1);
+		System.out.println("Nome do Conjuge: " +aluno1.getComjuge());*/
+		System.out.println(aluno1);
 		System.out.println("Media do aluno1 é: "+aluno1.getmediaNota());
 		System.out.println("O aluno1 está : " +(aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
 		System.out.println("---------------------------------------");
@@ -58,6 +72,7 @@ public class Ex {
 		System.out.println("Media do aluno2 é: "+aluno2.getmediaNota());
 		System.out.println("O aluno2 está : "+aluno2.getAlunoAprovado2());
 		*/
+		
 	}
 	
 
