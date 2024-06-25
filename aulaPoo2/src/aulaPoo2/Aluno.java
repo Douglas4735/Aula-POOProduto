@@ -1,5 +1,8 @@
 package aulaPoo2;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Objects;
 
 public class Aluno {
@@ -10,14 +13,15 @@ public class Aluno {
 	private String pai;
 	private String comjuge;
 	
-	private Disciplina disciplina = new Disciplina();
+	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 	
-	public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
+	public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
 	}
-	public Disciplina getDisciplina() {
-		return disciplina;
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
 	}
+ 
 	
 	public String getNome() {
 		return nome;
@@ -52,7 +56,12 @@ public class Aluno {
 	
 	
 	public double getmediaNota() {
-		return (disciplina.getNota1() + disciplina.getNota2() + disciplina.getNota3() + disciplina.getNota4()) / 4;
+		
+		 double somaNotas = 0.0;
+		 for(Disciplina disciplina : disciplinas) {
+			 somaNotas += disciplina.getNota();
+		 }
+		 return somaNotas / disciplinas.size();
 	}
 	public boolean getAlunoAprovado() {
 		double media = this.getmediaNota();
@@ -75,11 +84,11 @@ public class Aluno {
 	@Override
 	public String toString() {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", mae=" + mae + ", pai=" + pai + ", comjuge=" + comjuge
-				+ ", disciplina=" + disciplina + "]";
+				+ ", disciplinas=" + disciplinas + "]";
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(comjuge, disciplina, idade, mae, nome, pai);
+		return Objects.hash(comjuge, disciplinas, idade, mae, nome, pai);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -90,11 +99,10 @@ public class Aluno {
 		if (getClass() != obj.getClass())
 			return false;
 		Aluno other = (Aluno) obj;
-		return Objects.equals(comjuge, other.comjuge) && Objects.equals(disciplina, other.disciplina)
+		return Objects.equals(comjuge, other.comjuge) && Objects.equals(disciplinas, other.disciplinas)
 				&& idade == other.idade && Objects.equals(mae, other.mae) && Objects.equals(nome, other.nome)
 				&& Objects.equals(pai, other.pai);
 	}
-	
 	
 
 
