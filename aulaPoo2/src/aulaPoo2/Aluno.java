@@ -75,8 +75,12 @@ public class Aluno {
 	public String getAlunoAprovado2() {
 		double media = this.getmediaNota();
 		
-		if(media >= 70) {
-			return "Aprovado";
+		if(media >= 50) {
+			if(media >= 70) {
+				return "Aprovado";
+		}else {
+			return "Recuperação";
+		}
 		}else {
 			return "Reprovado";
 		}
